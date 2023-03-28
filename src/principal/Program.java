@@ -47,12 +47,18 @@ public class Program {
 			System.out.println(obj);
 		}
 		
-		System.out.println("==== TEST 4: seller insert ====");
+		System.out.println("==== TEST 4: Vendedor insert ====");
 		Vendedor newVendedor = new Vendedor(null, "Leonardo", "leos@gmail.com", new Date(), 4000.0,departamento);
 		vendedordao.insert(newVendedor);
 		System.out.println("Insert! New id = :"+newVendedor.getId());
 		
 		
+		
+		System.out.println("==== TEST 5: Vendedor update ====");
+		vendedor =vendedordao.findById(1);
+		vendedor.setEmail("MariaDB@gmail.com");
+		vendedordao.update(vendedor);
+		System.out.println("Update Completo");
 		
 		
 	}
