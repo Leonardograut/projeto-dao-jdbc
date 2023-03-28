@@ -23,17 +23,30 @@ public class Program {
 		
 		System.out.println(vendedor);
 		
+		
+		
 		System.out.println("==== TEST 2: seller findByDepartment ====");
 		
 		Departamento departamento = new Departamento(2,null);
-				
-				
+					
 		List<Vendedor>list =vendedordao.findByDepartamento(departamento);
 
-		
 		for (Vendedor obj : list) {
 			System.out.println(obj);
 		}
+		
+		
+		
+		System.out.println("==== TEST 3: seller findByDepartment ====");
+		 	
+		
+	    list =vendedordao.findAll();
+
+		for (Vendedor obj : list) {
+			System.out.println(obj);
+		}
+		
+		
 	}
 
 }
