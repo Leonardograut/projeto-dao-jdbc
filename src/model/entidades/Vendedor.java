@@ -16,6 +16,25 @@ public class Vendedor implements Serializable {
 	private Date dataNascimento;
 	private Double salarioBase;
 	
+	public Vendedor() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	public Vendedor(Integer id, String name, String email, Date dataNascimento, Double salarioBase,
+			Departamento departemento) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.dataNascimento = dataNascimento;
+		this.salarioBase = salarioBase;
+		this.departemento = departemento;
+	}
+
+
+
 	public Integer getId() {
 		return id;
 	}
@@ -69,19 +88,8 @@ public class Vendedor implements Serializable {
 	private Departamento departemento;
 	
 	
-	public Vendedor() {
-		
-	}
 	
-	public Vendedor(Integer id, String name, String email, Date dataNascimento,Double salarioBase) {
-		
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.dataNascimento = dataNascimento;
-		this.salarioBase = salarioBase;
-		
-	}
+	
 
 	@Override
 	public int hashCode() {
