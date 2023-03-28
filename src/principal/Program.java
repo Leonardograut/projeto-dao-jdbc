@@ -2,9 +2,11 @@ package principal;
 
 
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.VendedorDao;
-
+import model.entidades.Departamento;
 import model.entidades.Vendedor;
 
 public class Program {
@@ -20,7 +22,18 @@ public class Program {
 	    Vendedor vendedor = vendedordao.findById(3);
 		
 		System.out.println(vendedor);
+		
+		System.out.println("==== TEST 2: seller findByDepartment ====");
+		
+		Departamento departamento = new Departamento(2,null);
+				
+				
+		List<Vendedor>list =vendedordao.findByDepartamento(departamento);
 
+		
+		for (Vendedor obj : list) {
+			System.out.println(obj);
+		}
 	}
 
 }
